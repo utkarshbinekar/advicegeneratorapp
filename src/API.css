@@ -1,0 +1,122 @@
+/* API.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+.quote-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.quote-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+}
+
+.quote-title {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.quote-text {
+    font-size: 22px;
+    color: #555;
+    margin: 20px 0;
+    line-height: 1.6;
+    font-style: italic;
+    position: relative;
+}
+
+.quote-text::before {
+    content: "“";
+    font-size: 50px;
+    color: #007bff;
+    position: absolute;
+    left: -20px;
+    top: -10px;
+}
+
+.quote-text::after {
+    content: "”";
+    font-size: 50px;
+    color: #007bff;
+    position: absolute;
+    right: -20px;
+    bottom: -10px;
+}
+
+.quote-button {
+    padding: 12px 25px;
+    font-size: 18px;
+    color: #ffffff;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.quote-button:hover {
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.loading {
+    font-size: 20px;
+    color: #ffcc00; /* Bright yellow for better contrast */
+    text-align: center;
+    font-weight: bold;
+    animation: fadeIn 1s ease-in-out infinite alternate;
+}
+
+/* Loading Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .quote-container {
+        padding: 30px;
+    }
+
+    .quote-title {
+        font-size: 28px;
+    }
+
+    .quote-text {
+        font-size: 20px;
+    }
+
+    .quote-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
